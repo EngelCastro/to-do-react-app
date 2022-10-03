@@ -1,0 +1,23 @@
+.main-container {
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.main-container .to-do-container {
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: min(80vw, 500px);
+  min-height: 125px;
+  border-radius: 4px;
+}
+.main-container .to-do-container .title {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 24px;
+}

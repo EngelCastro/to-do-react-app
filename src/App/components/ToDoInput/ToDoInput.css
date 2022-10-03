@@ -1,0 +1,42 @@
+.to-do-input {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: min(80%,350px);
+  margin-bottom: 32px;
+  gap: 8px;
+}
+.to-do-input .container-input {
+ flex: 1 1 auto;
+ height: 34px;
+
+}
+.to-do-input .container-input .cl-input {
+  width: calc(100% - 20px);
+  height: 32px;
+  border: 1px solid rgb(137, 131, 148);
+  border-radius: 4px;
+  padding: 0 8px;
+}
+.to-do-input .container-input .cl-input:focus {
+  border: 2px solid purple;
+  outline: none;
+}
+.to-do-input .container-button {
+  flex: 0 0 auto;
+  background-color: rgb(129, 105, 218);
+  text-align: center;
+  width: 48px;
+  height: 28px;
+  padding: 1px 2%;
+  border-radius: 4px;
+}
+.to-do-input .container-button:hover {
+  cursor: pointer;
+}
+.to-do-input .container-button .cl-button {
+  font-weight: 100;
+  font-size: 12px;
+  color: white;
+}
+
