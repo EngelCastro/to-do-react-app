@@ -1,0 +1,12 @@
+.footer-container {
+  display: flex;
+  background-color: transparent;
+  width: 100%;
+  height: 48px;
+  border-top: 1px solid purple;
+}
+.footer-container .text-counter {
+  width: 100%;
+  padding: 0 24px;
+  align-self: center;
+}

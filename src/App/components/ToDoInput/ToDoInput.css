@@ -3,23 +3,26 @@
   flex-wrap: wrap;
   align-items: center;
   width: min(80%,350px);
-  margin-bottom: 32px;
+  margin-bottom: 28px;
   gap: 8px;
 }
 .to-do-input .container-input {
  flex: 1 1 auto;
- height: 34px;
-
+ height: 48px; 
 }
 .to-do-input .container-input .cl-input {
+  resize: none;
+  font-family: Poppins;
+  line-height: 16px;
+  letter-spacing: 1px;
   width: calc(100% - 20px);
   height: 32px;
   border: 1px solid rgb(137, 131, 148);
   border-radius: 4px;
-  padding: 0 8px;
+  padding: 8px 8px;
 }
 .to-do-input .container-input .cl-input:focus {
-  border: 2px solid purple;
+  border: 1px solid purple;
   outline: none;
 }
 .to-do-input .container-button {

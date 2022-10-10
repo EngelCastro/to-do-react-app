@@ -11,8 +11,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: min(80vw, 500px);
-  min-height: 125px;
+  width: min(80vw, 600px);
+  min-height: 0px;
   border-radius: 4px;
 }
 .main-container .to-do-container .title {

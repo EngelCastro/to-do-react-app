@@ -1,0 +1,21 @@
+.task-container {
+  display: flex;
+  background-color: blueviolet;
+  height: 56px;
+  width: 80%;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  align-items: center;  
+}
+.task-container .radio-buttom {
+  cursor: pointer;
+  height: 16px;
+  background-color: red;
+  width: 16px;
+  margin: 0 8px 0 16px;
+  border-radius: 16px;
+  /* background-color: blueviolet; */
+}
+.active {
+ background-color: blue !important;
+}
