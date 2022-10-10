@@ -1,5 +1,4 @@
 export interface TaskType {
-  title: string,
-  status: boolean,
-  active: string
+  title: string;
+  status: boolean;
 }
