@@ -11,32 +11,26 @@ const MainContainer = () => {
   const [listTask, setListTask] = useState<Array<TaskType>>([]);
 
   const onActionAddTask = () => {
-    setListTask([...listTask, { status: false, title: inputText , active: 'nooactive'}]);
-    console.log();
-    setInputText('');
+    setListTask([...listTask, { status: false, title: inputText }]);
+    setInputText("");
   };
 
   const handleInputTextChange = (event: React.FocusEvent<HTMLInputElement>) => {
     setInputText(event.currentTarget.value);
   }
 
-  const onCheck = (index: number) => {
-    const taskEdit = listTask[index];
-    console.log(index);
-    listTask[index] = {
-      ...taskEdit,
-      status: !taskEdit.status, 
-      active: taskEdit.status ? 'active' : '',
-      // active: taskEdit.status === true? 'active': '',
-    };
-    console.log(taskEdit.status,taskEdit.status === true? 'active': '');
-    setListTask([...listTask]);
-  }
-
-  
-  // const onChangeClassName = (className: string) => {
-  //   const taskEdit = listTask[className];
-  // };
+  // const onCheck = (index: number) => {
+  //   const taskEdit = listTask[index];
+  //   console.log(index);
+  //   listTask[index] = {
+  //     ...taskEdit,
+  //     status: !taskEdit.status, 
+  //     active: taskEdit.status ? 'active' : '',
+     
+  //   };
+    
+    // setListTask([...listTask]);
+  // }
 
   return (
     <div className="main-container">
@@ -45,17 +39,17 @@ const MainContainer = () => {
           To Do App
         </h2>
         <ToDoInput 
+          inputText = { inputText }       
           onAddItem = { onActionAddTask } 
           onChange = { handleInputTextChange } 
-          inputText = { inputText }       
         />
         {
           listTask.map((task, index) => (
             <Task
               key = { index }
               task = { task }
-              // active = "active"
-              onCheck = { () => onCheck(index)}
+              index = {index}
+              setListTask = {setListTask}
             />
           ))
         }

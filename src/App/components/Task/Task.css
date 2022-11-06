@@ -1,21 +1,57 @@
 .task-container {
   display: flex;
   background-color: blueviolet;
-  height: 56px;
+  min-height: 56px;
   width: 80%;
   border-radius: 4px;
   margin-bottom: 16px;
-  align-items: center;  
 }
 .task-container .radio-buttom {
+  display: flex;
   cursor: pointer;
+  justify-content: center;
+  align-self: center;
   height: 16px;
-  background-color: red;
   width: 16px;
-  margin: 0 8px 0 16px;
+  background-color: aliceblue;
+  margin: 0 12px 0 16px;
   border-radius: 16px;
   /* background-color: blueviolet; */
 }
-.active {
- background-color: blue !important;
+:is( :hover ).radio-buttom::before {
+  content: "";
+  display: flex;
+  align-self: center;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+
+  background-color: rgb(87, 6, 107);
+ 
+} 
+.containerText {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-weight: 500;
+  line-height: 24px;
+  word-spacing: 8px ;
+  overflow: hidden;
+  width: 88%;
+}
+.true::before  {
+ /* background-color: coral !important; */
+ content: "";
+ display: flex;
+ align-self: center;
+ width: 8px;
+ height: 8px;
+ border-radius: 8px;
+
+ background-color: rgb(87, 6, 107);
+ 
+}
+
+.true + .containerText {
+  text-decoration: line-through 1.5px coral;
 }

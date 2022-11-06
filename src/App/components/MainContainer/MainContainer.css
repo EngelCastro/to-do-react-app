@@ -1,5 +1,8 @@
 .main-container {
-  background-color: blueviolet;
+  /* background-color: #8BC6EC; */
+background-image: linear-gradient(58deg, #ad8bec 0%, #c27bbe 100%);
+
+  /* background: linear-gradient(0.25turn, #3f87a6, #6b4ac79a, #665b77); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,13 +10,14 @@
   height: 100vh;
 }
 .main-container .to-do-container {
-  background-color:white;
+  align-items: center;
+  background-color: white;
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  width: min(80vw, 600px);
   min-height: 0px;
-  border-radius: 4px;
+  width: min(80vw, 600px);
+  box-shadow: rgba(57, 11, 83, 0.24) 0 8PX 16PX 0;
 }
 .main-container .to-do-container .title {
   text-align: center;

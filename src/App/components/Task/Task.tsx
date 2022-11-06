@@ -1,27 +1,38 @@
-import React from "react";
+import React, { Dispatch, SetStateAction } from "react";
 import './Task.css';
 import { TaskType } from "../../types/task";
 
 type Props = {
-  onCheck: Function,
-  task: TaskType,
+  setListTask:Dispatch<SetStateAction<TaskType[]>>;
+  task: TaskType;
+  index: number;
 };
 
 function Task(props: Props) {
-  const { task, onCheck} = props
-  console.log(`holas ${task.active}`)
+  const { task, index, setListTask } = props;
+
+  const handleClickTask = () => {
+    setListTask((actualListTask) => {
+      const newListTask = [...actualListTask];
+      const taskEdit = actualListTask[index];
+      const newStatus = !taskEdit.status;
+
+      newListTask[index] = {
+        ...taskEdit,
+        status: newStatus,
+      };
+      return newListTask;
+    });
+  };
   return (
-  <div className = {`task-container`}>
-    <div  className = {`radio-buttom ${task.active}`}
-      onClick={ () => onCheck()} 
-      // style={
-      //   {
-      //     backgroundColor: task.status? 'green': 'red'
-      //   }
-      // }
+  <div className = {'task-container'}>
+    <div  className = {`radio-buttom ${task.status}`}
+      onClick={() => handleClickTask()} 
     >
     </div>
-    { task.title }
+    <div className = 'containerText'>
+      { task.title }
+    </div>
   </div>
   );
 }
