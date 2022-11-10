@@ -1,12 +1,42 @@
 .footer-container {
   display: flex;
   background-color: transparent;
-  width: 100%;
+  width: 36vw;
   height: 48px;
-  border-top: 1px solid purple;
+  margin-left: 34px;  
+  gap: 16px;
 }
-.footer-container .text-counter {
-  width: 100%;
-  padding: 0 24px;
+.footer-container::before {
+  content: "";  
+  position: absolute;
+  width: 33.5vw;
+  height: 1px;
+  background: rgb(75, 74, 75);
+}
+.tag {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  height: 24px;
+  gap: 4px;
+}
+.container-valor {
+  display: flex;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  background: rgb(23,125,250);
+  border-radius: 10px;
+}
+.valor {
+  font-size: 12px;
+  /* font-weight: bold; */
+  color: aliceblue;
   align-self: center;
+  padding: 0 6px;
+}
+.lbl-tag {
+  color: rgb(23,125,250);
+  font-weight: 600;
+
 }

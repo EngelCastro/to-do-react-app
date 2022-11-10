@@ -3,7 +3,8 @@
   flex-wrap: wrap;
   align-items: center;
   width: min(80%,350px);
-  margin-bottom: 28px;
+  min-height: 120px;
+  /* margin-bottom: 28px; */
   gap: 8px;
 }
 .to-do-input .container-input {
@@ -22,13 +23,20 @@
   padding: 8px 8px;
 }
 .to-do-input .container-input .cl-input:focus {
-  border: 1px solid purple;
+  border: 1px solid rgb(23,125,250);
   outline: none;
 }
 .to-do-input .container-button {
-  flex: 0 0 auto;
-  background-color: rgb(129, 105, 218);
+  /* flex: 0 0 auto; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(23,125,250, 0.08);
+  color: rgb(23,125,250);
   text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  color: rgb(23,125,250);
   width: 48px;
   height: 28px;
   padding: 1px 2%;
@@ -36,10 +44,13 @@
 }
 .to-do-input .container-button:hover {
   cursor: pointer;
-}
-.to-do-input .container-button .cl-button {
-  font-weight: 100;
-  font-size: 12px;
+  background: rgb(23,125,250);
   color: white;
 }
+.to-do-input .container-button .cl-button {
+  
+}
+/* .container-button .cl-button:hover {
+  color: azure;
+} */
 

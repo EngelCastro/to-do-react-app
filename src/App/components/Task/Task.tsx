@@ -1,6 +1,10 @@
 import React, { Dispatch, SetStateAction } from "react";
 import './Task.css';
 import { TaskType } from "../../types/task";
+import ReactDOM from 'react-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
+
 
 type Props = {
   setListTask:Dispatch<SetStateAction<TaskType[]>>;
@@ -32,6 +36,9 @@ function Task(props: Props) {
     </div>
     <div className = 'containerText'>
       { task.title }
+    </div>
+    <div className = {'delete'} style = {{color: 'rgb(68, 68, 68)'}} >
+    <FontAwesomeIcon className = {'trash-icon'} icon={faTrashCan} />
     </div>
   </div>
   );

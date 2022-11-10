@@ -1,6 +1,6 @@
 .main-container {
   /* background-color: #8BC6EC; */
-background-image: linear-gradient(58deg, #ad8bec 0%, #c27bbe 100%);
+background-image: linear-gradient(58deg, #784ddd 0%, #469c8e 100%);
 
   /* background: linear-gradient(0.25turn, #3f87a6, #6b4ac79a, #665b77); */
   display: flex;
@@ -11,14 +11,16 @@ background-image: linear-gradient(58deg, #ad8bec 0%, #c27bbe 100%);
 }
 .main-container .to-do-container {
   align-items: center;
-  background-color: white;
+  background-color: rgb(243, 243, 243);
   border-radius: 4px;
   display: flex;
   flex-direction: column;
-  min-height: 0px;
+  min-height: 0px; 
   width: min(80vw, 600px);
   box-shadow: rgba(57, 11, 83, 0.24) 0 8PX 16PX 0;
+  
 }
+
 .main-container .to-do-container .title {
   text-align: center;
   font-size: 1rem;

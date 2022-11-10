@@ -4,7 +4,6 @@ import './ToDoInput.css';
 type Props = {
   onAddItem: Function,
   onChange: Function,
-  // onDelete: Function,
   inputText: string
 };
 
@@ -36,7 +35,7 @@ const ToDoInput = (props: Props) => {
         className = "container-button"
         onClick = { () => onAddItem()}
       >
-        <span className="cl-button">Add</span>
+        <span className="cl-button">+ Add</span>
       </div>
     </div>
 

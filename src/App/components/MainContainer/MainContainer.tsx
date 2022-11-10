@@ -9,28 +9,27 @@ const MainContainer = () => {
 
   const [inputText, setInputText] = useState('');
   const [listTask, setListTask] = useState<Array<TaskType>>([]);
+  const [counter, setCounter] = useState(0)
+
+  // const incrementar = (num: number) => {
+  //   setCounter(counter + num)
+  // }
 
   const onActionAddTask = () => {
-    setListTask([...listTask, { status: false, title: inputText }]);
-    setInputText("");
+    if(inputText.trim() !== ""){
+      setListTask([...listTask, { status: false, title: inputText }]);
+      setInputText("");
+      setCounter(counter + 1);
+    }
+    else {
+      setInputText("");
+    }
   };
+
 
   const handleInputTextChange = (event: React.FocusEvent<HTMLInputElement>) => {
     setInputText(event.currentTarget.value);
   }
-
-  // const onCheck = (index: number) => {
-  //   const taskEdit = listTask[index];
-  //   console.log(index);
-  //   listTask[index] = {
-  //     ...taskEdit,
-  //     status: !taskEdit.status, 
-  //     active: taskEdit.status ? 'active' : '',
-     
-  //   };
-    
-    // setListTask([...listTask]);
-  // }
 
   return (
     <div className="main-container">
@@ -53,7 +52,10 @@ const MainContainer = () => {
             />
           ))
         }
-        <Footer />
+                     
+        <Footer 
+          valor = {counter}
+        />
       </div>
     </div>
   );
