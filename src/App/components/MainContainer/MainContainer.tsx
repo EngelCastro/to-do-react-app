@@ -17,7 +17,9 @@ const MainContainer = () => {
 
   const onActionAddTask = () => {
     if(inputText.trim() !== ""){
-      setListTask([...listTask, { status: false, title: inputText }]);
+      const listIdex = listTask.map(value => value.index);
+      console.log(...listIdex);
+      setListTask([...listTask, { status: false, title: inputText, index: Math.max(...listIdex, 0) + 1 }]);
       setInputText("");
       setCounter(counter + 1);
     }

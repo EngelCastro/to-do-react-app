@@ -1,7 +1,6 @@
 import React, { Dispatch, SetStateAction } from "react";
 import './Task.css';
 import { TaskType } from "../../types/task";
-import ReactDOM from 'react-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrashCan } from '@fortawesome/free-solid-svg-icons'
 
@@ -28,6 +27,15 @@ function Task(props: Props) {
       return newListTask;
     });
   };
+
+  const daleteClickTask = () => {
+    setListTask((actualListTask) => {
+      const newListTask = [...actualListTask];
+      console.log( newListTask)
+      const taskDelete = newListTask.filter((item) => item.index !== task.index );
+      return taskDelete;
+    });
+  };
   return (
   <div className = {'task-container'}>
     <div  className = {`radio-buttom ${task.status}`}
@@ -38,7 +46,11 @@ function Task(props: Props) {
       { task.title }
     </div>
     <div className = {'delete'} style = {{color: 'rgb(68, 68, 68)'}} >
-    <FontAwesomeIcon className = {'trash-icon'} icon={faTrashCan} />
+    <FontAwesomeIcon 
+      className = {'trash-icon'} 
+      icon={faTrashCan} 
+      onClick= {() => daleteClickTask()}
+    />
     </div>
   </div>
   );
