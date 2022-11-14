@@ -9,12 +9,8 @@ const MainContainer = () => {
 
   const [inputText, setInputText] = useState('');
   const [listTask, setListTask] = useState<Array<TaskType>>([]);
-  const [counter, setCounter] = useState(0)
-
-  // const incrementar = (num: number) => {
-  //   setCounter(counter + num)
-  // }
-
+  const [counter, setCounter] = useState(0);
+  
   const onActionAddTask = () => {
     if(inputText.trim() !== ""){
       const listIdex = listTask.map(value => value.index);
@@ -44,19 +40,22 @@ const MainContainer = () => {
           onAddItem = { onActionAddTask } 
           onChange = { handleInputTextChange } 
         />
-        {
-          listTask.map((task, index) => (
-            <Task
-              key = { index }
-              task = { task }
-              index = {index}
-              setListTask = {setListTask}
-            />
-          ))
-        }
+        <div className="task-item-container">
+          {
+            listTask.map((task, index) => (
+              <Task
+                key = { index }
+                task = { task }
+                index = {index}
+                setListTask = {setListTask}
+              />
+            ))
+          }
+        </div>
                      
         <Footer 
-          valor = {counter}
+          valor = {listTask.length}
+          realized = {listTask.filter(task => task.status === true).length}
         />
       </div>
     </div>

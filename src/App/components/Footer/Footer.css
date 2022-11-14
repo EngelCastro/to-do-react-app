@@ -5,6 +5,7 @@
   height: 48px;
   margin-left: 34px;  
   gap: 16px;
+  padding: 20px 0;
 }
 .footer-container::before {
   content: "";  

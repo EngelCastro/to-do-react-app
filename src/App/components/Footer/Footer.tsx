@@ -2,11 +2,12 @@ import './Footer.css';
 
 type Props = {
   valor: number;
+  realized: number;
 }
 
 const Footer = (props: Props) => {
 
-  const {valor} = props
+  const {valor, realized} = props
 
   return (
     <div className="footer-container">
@@ -22,7 +23,7 @@ const Footer = (props: Props) => {
         <label className="lbl-tag">Realized</label>
         <div className="container-valor">
           <span className="valor">
-            {valor + 12233}
+            {realized}
           </span>
         </div> 
       </div>
