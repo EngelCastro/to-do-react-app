@@ -31,9 +31,8 @@ function Task(props: Props) {
   const daleteClickTask = () => {
     setListTask((actualListTask) => {
       const newListTask = [...actualListTask];
-      console.log( newListTask)
-      const taskDelete = newListTask.filter((item) => item.index !== task.index );
-      return taskDelete;
+      newListTask.splice(index, 1);
+      return newListTask;
     });
   };
   return (
